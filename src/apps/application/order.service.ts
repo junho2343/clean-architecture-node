@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { OrderServicePort } from "@apps/port/in/order.service.port";
 import { Inject, Injectable, InjectionTarget } from "@libs/decorator";
 import TestService from "@apps/application/test.service";

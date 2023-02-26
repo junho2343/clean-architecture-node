@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { RouteDefinition, RouteMethod } from "@libs/interface";
 import { RouteConstant } from "@libs/constant";
 

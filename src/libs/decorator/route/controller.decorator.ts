@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { RouteConstant } from "@libs/constant";
 
 export const Controller = (prefix: string) => {

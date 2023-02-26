@@ -1,3 +1,5 @@
+import "reflect-metadata";
+
 import OrderController from "@apps/adapter/in/order.controller.adapter";
 import App from "@core/app";
 

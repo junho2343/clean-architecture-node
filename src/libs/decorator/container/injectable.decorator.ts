@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { ContainerConstant } from "@libs/constant/container.constant";
 
 export const Injectable = (target: any) => {
