@@ -10,7 +10,7 @@ import OrderService from "@apps/application/order.service";
 
 @InjectionTarget
 @Controller("/order")
-class OrderController {
+export default class OrderController {
   #orderServicePort;
 
   constructor(@Inject(OrderService) orderServicePort: OrderServicePort) {
@@ -18,10 +18,8 @@ class OrderController {
   }
 
   @Post()
-  order() {
-    this.#orderServicePort.order();
-    // console.log();
-    // this.#orderPort.order();
+  create() {
+    this.#orderServicePort.create();
   }
 
   @Get("/test")
@@ -29,5 +27,3 @@ class OrderController {
     console.log("test");
   }
 }
-
-export default OrderController;

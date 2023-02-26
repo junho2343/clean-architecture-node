@@ -1,3 +1,3 @@
 export interface OrderServicePort {
-  order: () => void;
+  create: () => void;
 }

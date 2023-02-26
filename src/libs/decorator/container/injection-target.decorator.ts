@@ -10,7 +10,7 @@ export const InjectionTarget = <T extends { new (...args: any[]): {} }>(
       const containerArguments: ContainerArgumentDefinition[] =
         Reflect.getMetadata(ContainerConstant.arguments, target);
 
-      const constructorArguments = containerArguments.reduce(
+      const constructorArguments = containerArguments?.reduce(
         (sum: any[], current) => {
           sum[current.parameterIndex] = current.value;
           return sum;
@@ -18,7 +18,7 @@ export const InjectionTarget = <T extends { new (...args: any[]): {} }>(
         []
       );
 
-      super(...constructorArguments);
+      constructorArguments ? super(...constructorArguments) : super();
     }
   };
 };

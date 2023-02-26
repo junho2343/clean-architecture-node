@@ -11,7 +11,7 @@ export const Inject = (provider: Object) => {
     const containerProvider: ContainerArgumentDefinition[] =
       Reflect.getMetadata(ContainerConstant.provider, provider);
 
-    // dependency injection을 위해 인스턴스 주입
+    // dependency injection을 위해 class 내 인스턴스 저장
     if (!Reflect.hasMetadata(ContainerConstant.arguments, target)) {
       Reflect.defineMetadata(ContainerConstant.arguments, [], target);
     }
